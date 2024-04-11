@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { FaBars,  FaSearch, FaSearchDollar, FaSearchPlus, FaShoppingCart, FaTimes } from "react-icons/fa";
 import { IoSearchCircle } from "react-icons/io5";
+import logo from "../../assets/Logo/Frame 2.png"
 import { NavLink } from "react-router-dom";
 import "../../styles/style.css";
 import AOS from "aos";
@@ -25,13 +26,13 @@ const Header = () => {
   }, []);
 
   return (
-    <div className=" flex items-center justify-center h-20 m-auto font-poppins">
-      <div className="flex items-center justify-center gap-24  md:gap-50 lg:gap-56 md:p-10 ">
+    <div className="flex items-center justify-center h-20 m-auto font-poppins">
+      <div className="flex items-center justify-center gap-24 md:gap-50 lg:gap-56 md:p-10 ">
         <NavLink to="/">
           <div>
             <img
               className="w-24 md:w-40 lg:w-32"
-              src="./src/assets/logo/Frame 2.png"
+              src={logo}
               alt="logo"
             />
           </div>
@@ -101,24 +102,24 @@ const Header = () => {
             </NavLink>
           </nav>
         </div>
-        <div className="flex items-center gap-4 relative">
+        <div className="relative flex items-center gap-4">
           {/* <img
             className="w-24 md:w-28 lg:w-24"
             src="./src/assets/cart-search/Frame 6.png"
             alt="cart-search"
           /> */}
-          <div className="flex  items-center absolute lg:relative pl-2 md:pl-0">
+          <div className="absolute flex items-center pl-2 lg:relative md:pl-0">
           <IoSearchCircle  onClick={onClickSearch} className=""  size={40}/> </div>
-         <div className="absolute lg:relative pl-12 md:pl-0  lg:pl-0">
+         <div className="absolute pl-12 lg:relative md:pl-0 lg:pl-0">
          <FaShoppingCart size={30}/></div>
          {
           find && (
             <div  data-aos="zoom-right"
-            className="absolute z-10 lg:right-28 md:right-28  flex flex-col items-center font-semibold transition-transform transform translate-y-0 rounded-2xl shadow-2xl duration-500 customRed">
+            className="absolute z-10 flex flex-col items-center font-semibold transition-transform duration-500 transform translate-y-0 shadow-2xl lg:right-28 md:right-28 rounded-2xl customRed">
               <input type="text" placeholder="Search Food.." 
-              className="py-2 px-6 w-44 rounded-2xl outline-none focus:placeholder-transparent"
+              className="px-6 py-2 outline-none w-44 rounded-2xl focus:placeholder-transparent"
               />
-              <FaTimes onClick={onClickSearch}  className="absolute right-4 top-3 text-black"/>
+              <FaTimes onClick={onClickSearch}  className="absolute text-black right-4 top-3"/>
             </div>
           )
         }
@@ -133,7 +134,7 @@ const Header = () => {
         {toggle && (
           <div
             data-aos="fade-right"
-            className="absolute z-10 left-0 flex flex-col items-center w-full px-6 py-2 font-semibold transition-transform transform translate-y-0 rounded-lg shadow-2xl duration-500 md:hidden lg:hidden bg-white top-20 customRed"
+            className="absolute left-0 z-10 flex flex-col items-center w-full px-6 py-2 font-semibold transition-transform duration-500 transform translate-y-0 bg-white rounded-lg shadow-2xl md:hidden lg:hidden top-20 customRed"
           >
             <nav className="flex flex-col gap-3 list-none ">
               <NavLink

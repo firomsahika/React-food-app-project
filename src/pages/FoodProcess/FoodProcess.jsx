@@ -1,4 +1,7 @@
 import React, {useEffect} from 'react'
+import packing from "../../assets/food-process/Frame 36 (1).png"
+import prepare from "../../assets/food-process/Frame 36.png"
+import deliver from "../../assets/food-process/Frame 36 (2).png"
 import AOS from "aos";
 import "aos/dist/aos.css";
 
@@ -11,30 +14,30 @@ const FoodProcess = () => {
     const datas = [
         {
             id:1,
-            image:"./src/assets/food-process/Frame 36.png",
+            image:prepare,
             title:"Prepare",
             text:"Restaurants offer a variety of dining experiences."
         },
         {
            id:2,
-           image:"./src/assets/food-process/Frame 36 (1).png",
+           image:packing,
            title:"Packing",
            text:"Catering companies specialize in providing food and beverage services"
 
         },
         {
           id:3,
-          image:"./src/assets/food-process/Frame 36 (2).png",
+          image:deliver,
           title:"Deliver",
           text:"Meal delivery services deliver freshely prepared meals directly to customers."
         }
     ]
   return (
-    <div className='min-h-screen m-auto py-10 md:py-2 lg:py-0 font-poppins'>
-        <div className=' '>
+    <div className='min-h-screen py-10 m-auto md:py-2 lg:py-0 font-poppins'>
+        <div className=''>
           <div className='flex flex-col items-center justify-center gap-10 px-20'>
-          <p className='text-3xl md:text-4xl lg:text-5xl font-bold md:py-10 lg:py-8 text-center'>Our Food Process</p>
-          <div className='flex flex-col md:flex-row lg:flex-row gap-10 items-center'>
+          <p className='text-3xl font-bold text-center md:text-4xl lg:text-5xl md:py-10 lg:py-8'>Our Food Process</p>
+          <div className='flex flex-col items-center gap-10 md:flex-row lg:flex-row'>
           {
             datas.map((data)=>(
               <div
@@ -47,7 +50,7 @@ const FoodProcess = () => {
                 "0"
               }
             
-              className='flex flex-col items-center  justify-center text-center'
+              className='flex flex-col items-center justify-center text-center'
               >
                <div 
                data-aos-delay={
@@ -56,7 +59,7 @@ const FoodProcess = () => {
                 data.id === 3 ? "400" :
                 "0"
               }
-               className='flex  flex-col md:flex-row lg:flex-row items-center justify-center  gap-8  md:relative lg:relative'>
+               className='flex flex-col items-center justify-center gap-8 md:flex-row lg:flex-row md:relative lg:relative'>
                <img src={data.image} alt="prepare"
                 className='w-40 md:w-20 lg:w-32'
                 />
@@ -68,8 +71,8 @@ const FoodProcess = () => {
                }
                 
                </div>
-                <p className='text-xl font-semibold py-2 md:py-8 lg:py-8'>{data.title}</p>
-                <p className='grayColor text-center max-w-sm'>{data.text}</p>
+                <p className='py-2 text-xl font-semibold md:py-8 lg:py-8'>{data.title}</p>
+                <p className='max-w-sm text-center grayColor'>{data.text}</p>
               </div>
             ))
           }
