@@ -1,0 +1,23 @@
+.customRed{
+    color: #FF2626;
+}
+.customBg{
+    background-color: #FF2626;
+}
+.lightBg{
+    background-color:#FFE6E6;
+}
+.backgroundColor{
+    background: linear-gradient(to bottom, #FF2626 0%, white 50%, white 100%);
+}
+.grayColor{
+    color:#8B8B8B;
+}
+@media (max-width: 768px) {
+    .custom-type-animation {
+      font-size: 1rem; /* Set the desired font size for medium-sized screens and above */
+    }
+  }
+.textDecorationPadding{
+    padding-bottom:10px;
+}
