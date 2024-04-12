@@ -1,14 +1,14 @@
 import React from 'react'
 import { BiLogoGoogle, BiLogoPlayStore } from 'react-icons/bi'
 import { FaAppStoreIos } from 'react-icons/fa'
-
+import app from "../../assets/app/Frame 54.png"
 const FoodApp = () => {
   return (
     <section className='items-center justify-center font-poppins'>
        <div className='relative flex flex-col items-center justify-center px-6 lg:flex '>
          <img
          className='lg:h-[60vh] lg:flex hidden'
-         src="./src/assets/app/Frame 54.png" alt="frame-54" />
+         src={app} />
          
          <div className='flex flex-col items-center justify-center '>
          <p className='text-3xl font-bold text-center lg:hidden lg:5xl md:4xl'>Download ios & Android App</p>
