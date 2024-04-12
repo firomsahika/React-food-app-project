@@ -1,8 +1,21 @@
-import React from 'react'
+import React,{useEffect} from 'react'
 import { BiLogoGoogle, BiLogoPlayStore } from 'react-icons/bi'
 import { FaAppStoreIos } from 'react-icons/fa'
 import app from "../../assets/app/Frame 54.png"
+import iphone from "../../assets/app/Group 7.png"
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+
+
+
 const FoodApp = () => {
+  useEffect(() => {
+    AOS.init({
+      duration: 1500
+    });
+  }, []);
+
+
   return (
     <section className='items-center justify-center font-poppins'>
        <div className='relative flex flex-col items-center justify-center px-6 lg:flex '>
@@ -21,8 +34,9 @@ const FoodApp = () => {
          size={40}/>
          </div>
             <img
+            data-aos="fade-up"
             className='lg:absolute p-0 w-[20rem] lg:w-[50rem]  lg:left-[24rem] lg:top-[-12rem] '
-            src="./src/assets/app/Group 7.png" alt="group 7" />
+            src={iphone} alt="group 7" />
          </div>
        </div>
     </section>

@@ -27,7 +27,7 @@ const Header = () => {
 
   return (
     <div className="flex items-center justify-center h-20 m-auto font-poppins">
-      <div className="flex items-center justify-center gap-24 md:gap-50 lg:gap-56 md:p-10 ">
+      <div className="flex items-center justify-center font-semibold gap-24 md:gap-50 lg:gap-56 md:p-10 ">
         <NavLink to="/">
           <div>
             <img

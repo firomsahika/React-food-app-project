@@ -6,6 +6,7 @@ import BestFood from "./pages/BestFood/BestFood"
 import FoodProcess from "./pages/FoodProcess/FoodProcess"
 import CustomerReview from "./pages/CustomerReview/CustomerReview"
 import FoodApp from "./pages/FoodApp/FoodApp"
+import Footer from "./pages/FooterPage/Footer"
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
     <FoodProcess />
     <CustomerReview />
     <FoodApp />
+    <Footer />
     
     </>
   )
