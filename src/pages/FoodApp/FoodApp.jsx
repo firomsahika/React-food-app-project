@@ -27,13 +27,14 @@ const FoodApp = () => {
 
           <div className='flex '>
           <FaGooglePlay size={50}  className=' absolute left-32 top-40  text-amber-500'/>
+          <p className='text-xl absolute left-20 top-20 text-white'>Download ios & Android App</p>
           <p className='absolute left-28 top-56  text-white'>Play Store</p>
           <FaAppStoreIos size={50} className='absolute left-52 top-40 text-amber-500'/>
           <p className='font-poppins absolute left-52 top-56  text-white'>Apple Store</p>
           </div>
          </div>
          <div className='flex flex-col items-center justify-center '>
-         <p className='text-3xl font-bold text-center lg:hidden lg:5xl md:4xl'>Download ios & Android App</p>
+         <p className='text-3xl font-bold text-center lg:hidden  lg:5xl md:4xl'>Download ios & Android App</p>
          <div className='flex gap-4 py-4 lg:hidden'>
          <BiLogoPlayStore 
          className='text-blue-400'
